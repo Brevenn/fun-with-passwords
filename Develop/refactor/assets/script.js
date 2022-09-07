@@ -1,22 +1,21 @@
-let isLowerCase 
-let isUpperCase
-let areNumbers
-let areSpecialCharacters
+function generatePassword() {
 
-const passwordPopUp = () => {
-  passChars = parseInt(prompt('How many characters would you like in your password?'))
-  isLowerCase = confirm('wanna add lowercase letters?')
-  isUpperCase = confirm('WANNA ADD UPPERCASES TO THE MIX?')
-  areNumbers = confirm('h0w ab0ut s0me numb3rs t0 g0 w1th?')
-  areSpecialCharacters = confirm('~~make your password special with special characters?!~~')
-    console.log(isLowerCase, isUpperCase, areNumbers, areSpecialCharacters)
+  var uppercaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var lowercaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  var numberArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+  var speccharArray = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "=", "~", "`"];
 
-  if(isNaN(passChars) = true || passChars < 8 || passChars > 128 ) {
-    alert('The password must be between 8 and 128 characters')
-      passwordPopUp()
-  }
+  var resultArray = [];
+  var userArray = [];
+
+  uppercaseArray [1]
+
+    var numChar = prompt ("Your password must be between 8 and 128 characters long.");
+    var numbers = confirm ("Ya want some numbers?");
+    var uppercases = confirm ("YOU WANT SOME UPPERCASE LETTERS?");
+    var lowercases = confirm ("ya want some lowercases?");
+    var characters = confirm ("~Spice it up with special characters?~")
 }
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
