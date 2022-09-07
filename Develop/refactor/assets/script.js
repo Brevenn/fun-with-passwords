@@ -1,44 +1,56 @@
+// Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword() {
+  var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
+  var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var specialChar = "!@#$%&'()*+,-./:;<=>?";
+  var numberChar = "0123456789";
+  var passwordLength;
+  var uppercaseCheck;
+  var numberCheck;
+  var specialCheck;
 
-  var uppercaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-  var lowercaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-  var numberArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-  var speccharArray = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "=", "~", "`"];
 
-  var resultArray = [];
-  var userArray = [];
+  function determineLength(){
+    passwordLength = prompt("Welcome to my password randomizer! Your password must be between 8 and 128 character long. Enter how many you would like below!");
 
-  uppercaseArray [1]
-
-    var numChar = prompt ("Your password must be between 8 and 128 characters long.");
-    var numbers = confirm ("Ya want some numbers?");
-    var uppercases = confirm ("YOU WANT SOME UPPERCASE LETTERS?");
-    var lowercases = confirm ("ya want some lowercases?");
-    var characters = confirm ("~Spice it up with special characters?~")
-
-  if (numbers){
-    resultArray = resultArray.concat(numberArray);
-  }
-  if (uppercases){
-    resultArray = resultArray.concat(uppercaseArray);
-  }
-  if (lowercases){
-    resultArray = resultArray.concat(lowercaseArray);
-  }
-  if (characters){
-    resultArray = resultArray.concat(speccharArray);
-  }
-  console.log (resultArray);
-  
-  for (var i = 0; i < numCharacters; i++) {
-
-    userArray.push (resultArray[Math.floor(Math.random() * resultArray.length)]);
+      if(passwordLength < 8){
+        alert("Password must be between 8 and 128 characters long!");
+        determineLength();
+      }else if(passwordLength > 128){
+        alert("Password must be between 8 and 128 characters long!");
+        determineLength();
+      }else if(isNaN(passwordLength)){
+        alert("Password must be between 8 and 128 characters long!");
+        determineLength();
+      }else{
+        alert("Great, go through the next couple of questions to determine your password style!");
+      }
+      return passwordLength;
   }
 
-  return resultArray;
-}
+  function determineUppercase(){
+    uppercaseCheck = prompt("WOULD YOU LIKE SOME UPPERCASE CHARACTERS? Yes or No:");
+      uppercaseCheck = uppercaseCheck.toLowerCase();
+
+      if(""){
+        alert("Please answer Yes or No!");
+        determineUppercase();
+
+      }else if (uppercaseCheck === "yes"){
+        uppercaseCheck = true;
+        return uppercaseCheck
+
+      }else if (uppercaseCheck === "no"){
+        uppercaseCheck = false; 
+        return uppercaseCheck;
+
+      }else {
+        alert("Please answer Yes or No!");
+        determineUppercase();
+      }
+      return uppercaseCheck;
+  }
 
 
 // Write password to the #password input
