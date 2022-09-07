@@ -1,3 +1,5 @@
+var generateBtn = document.querySelector("#generate");
+
 function generatePassword() {
 
   var uppercaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -35,13 +37,9 @@ function generatePassword() {
     userArray.push (resultArray[Math.floor(Math.random() * resultArray.length)]);
   }
 
-  return userArray.join("");
-
+  return resultArray;
 }
 
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
