@@ -1,7 +1,9 @@
 Fun with Passwords! Spin the wheel of the generator!
 _____________________________________________________________________________________________
+
 Intro:
 Howdy! Here you can find a refactor of a password generator that was previously not functioning. Ive have written a solution which allows the password generator to randomly generate using Upper/Lowercase letters, Numbers and Special characters.
+
 _____________________________________________________________________________________________
 
 USER Story:
@@ -28,6 +30,7 @@ THEN a password is generated that matches the selected criteria.
 
 WHEN the password is generated, 
 THEN the password is either displayed in an alert or written to the page.
+
 _____________________________________________________________________________________________
 
 Refactor Deployed:
@@ -35,3 +38,9 @@ Refactor Deployed:
 
 Original Deployed:
 Here you can find a deployed link to the original starter code: https://github.com/coding-boot-camp/friendly-parakeet
+
+_____________________________________________________________________________________________
+
+Author: Charles Breven Glasgow 
+UT Austin Coding Boot Camp
+Github: https://github.com/Brevenn
