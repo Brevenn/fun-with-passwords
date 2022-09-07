@@ -15,7 +15,30 @@ function generatePassword() {
     var uppercases = confirm ("YOU WANT SOME UPPERCASE LETTERS?");
     var lowercases = confirm ("ya want some lowercases?");
     var characters = confirm ("~Spice it up with special characters?~")
+
+  if (numbers){
+    resultArray = resultArray.concat(numberArray);
+  }
+  if (uppercases){
+    resultArray = resultArray.concat(uppercaseArray);
+  }
+  if (lowercases){
+    resultArray = resultArray.concat(lowercaseArray);
+  }
+  if (characters){
+    resultArray = resultArray.concat(speccharArray);
+  }
+  console.log (resultArray);
+  
+  for (var i = 0; i < numCharacters; i++) {
+
+    userArray.push (resultArray[Math.floor(Math.random() * resultArray.length)]);
+  }
+
+  return userArray.join("");
+
 }
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
